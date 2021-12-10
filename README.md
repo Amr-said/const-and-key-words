@@ -129,7 +129,7 @@ Ex:\
 ***Another time when returning a const reference may not a good idea is when you are returning a reference to member data of an object.\
 **Although returning a const reference prevents anyone from changing the data by using it, it means that you have to have persistent data to back the reference--it has to actually be a field of the object and not temporary data created in the function.\
 *Once you make the reference part of the interface to the class, then, you fix the implementation details. This can be frustrating if you later wish to change your class's private data so the result of the function is computed when the function is invoked rather than actually be stored in the class at all times.\
-=================================================================================================================================================================================
+=================================================================================================================================================================================\
 
 ####'&' Symbol####
 ------------------
