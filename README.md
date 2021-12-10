@@ -60,13 +60,13 @@ return pi*pi*r;
 
 **For instance, if you are returning a reference to some member data (usually not a good thing to do, but there are exceptions), then you may want to have a non-const version of the function that returns a non-const reference:\
 Ex:\
-               /*int& myClass::getData(){
-                     return data;
-                 }
-               */
+               /*int& myClass::getData(){ \
+                     return data;          \
+                 }                          \
+               */                            \
 ***On the other hand, you don't want to prevent someone using a const version of your object,\
 Ex:\
-/*myClass constDataHolder;*/
+/*myClass constDataHolder;*/ \
 ***from getting the data. You just want to prevent that person from changing it by returning a const reference.\
 **But you probably don't want the name of the function to change just because you change whether the object is const or not--among other things, this would mean an awful lot of code might have to change just because you change how you declare a variable--going from a non-const to a const version of a variable would be a real headache.\
 
@@ -74,10 +74,10 @@ Ex:\
 *Fortunately, C++ allows you to overload based on the const-ness of a method. So you can have both const and non-const methods, and the correct version will be chosen.\
 **If you wish to return a non-const reference in some cases, you merely need to declare a second, const version of the method that returns a const method:\
 EX:\
-                      /*const int& myData::getData() const {
-                                    return data;
-                                  }
-                     */
+                      /*const int& myData::getData() const {\
+                                    return data;\
+                                  }\
+                     */\
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
 ****Const iterators****
