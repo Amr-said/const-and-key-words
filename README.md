@@ -16,7 +16,7 @@ ______________
           **Moreover, by declaring the argument const, users of the function can be sure that their object will not be changed and not need to worry about the possible side                 effects of making the function call.\
           
 **\
-________________________________________________________________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________________________________________________________________\
 ****Const Pointers****
 
 ***We've already seen const references demonstrated, and they're pretty natural: when you declare a const reference, you're only making the data referred to const.And references, by their very nature, cannot change what they refer to.\
@@ -31,6 +31,7 @@ Ex:\
             if you just want the address stored in the pointer itself to be const, then you have to put const after the *:\
             /* int x;
                int * const p = &x; */
+               
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
 
 ****Const Functions****
