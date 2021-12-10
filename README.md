@@ -1,7 +1,7 @@
 ####Const####
 ______________
 
-* Const gives you the ability to document your program more clearly and actually enforce that documentation.\
+* Const gives you the ability to document your program more clearly and actually enforce that documentation.
 * By enforcing your documentation, the const keyword provides guarantees to your users that allow you to make performance optimizations without the threat of damaging their data.\
 * For instance, const references allow you to specify that the data referred to won't be changed; this means that you can use const references as a simple and immediate way of improving performance for any function that currently takes objects by value without having to worry that your function might modify the data\
 * Even if it does, the compiler will prevent the code from compiling and alert you to the problem. On the other hand, if you didn't use const references, you'd have no easy way to ensure that your data wasn't modified.\
@@ -14,7 +14,7 @@ ______________
 
           **Here, the int obj is passed by reference into find. For safety's sake, const is used to ensure that find cannot change the obj--after all, it's just supposed to make sure that the obj is in a valid state. This can prevent silly programming mistakes that might otherwise result in damaging the obj (for instance, by setting a field of the class for testing purposes, which might result in the field's never being reset)\
           **Moreover, by declaring the argument const, users of the function can be sure that their object will not be changed and not need to worry about the possible side effects of making the function call.\
-_____________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________\
+________________________________________________________________________________________________________________________________________________________________________________\
 ****Const Pointers****
 
 ***We've already seen const references demonstrated, and they're pretty natural: when you declare a const reference, you're only making the data referred to const.And references, by their very nature, cannot change what they refer to.\
@@ -29,7 +29,7 @@ Ex:\
             if you just want the address stored in the pointer itself to be const, then you have to put const after the *:\
             /* int x;
                int * const p = &x; */
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
 
 ****Const Functions****
 
@@ -51,7 +51,7 @@ return pi*pi*r;
 ***const functions have a slightly stronger restriction than merely that they cannot modify the data.\
 **They must make it so that they cannot be used in a way that would allow you to use them to modify const data.\
 *This means that when const functions return references or pointers to members of the class, they must also be const.\
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
 ****Const Overloading****
 *In large part because const functions cannot return non-const references to an objects' data, there are many times where it might seem appropriate to have both const and non-const versions of a function.\
 **For instance, if you are returning a reference to some member data (usually not a good thing to do, but there are exceptions), then you may want to have a non-const version of the function that returns a non-const reference:\
@@ -75,7 +75,7 @@ EX:\
 #                                  }
 #                     */
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
 ****Const iterators****
 
 *As we've already seen, in order to enforce const-ness, C++ requires that const functions return only const pointers and references.\
@@ -96,7 +96,7 @@ itr != end;
 std::cout<< *itr <<std::endl;
 }
 */
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
 ****Const cast****
 
 ***Sometimes, you have a const variable and you really want to pass it into a function that you are certain won't modify it.\
@@ -117,7 +117,7 @@ Ex:\
               // cast away const-ness for our strlen function
                    bad_strlen( const_cast<char *>(x) );
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
 ****Dangers of Too-much Const****
 
 *Beware of exploiting const too much; for instance, just because you can return a const reference doesn't mean that you should return a const reference.\
@@ -126,7 +126,7 @@ Ex:\
 ***Another time when returning a const reference may not a good idea is when you are returning a reference to member data of an object.\
 **Although returning a const reference prevents anyone from changing the data by using it, it means that you have to have persistent data to back the reference--it has to actually be a field of the object and not temporary data created in the function.\
 *Once you make the reference part of the interface to the class, then, you fix the implementation details. This can be frustrating if you later wish to change your class's private data so the result of the function is computed when the function is invoked rather than actually be stored in the class at all times.\
-=================================================================================================================================================================================================================================================================================================================================================================================================================================================================================\
+================================================================================================================================================================================\
 
 ####'&' Symbol####
 ------------------
@@ -144,7 +144,7 @@ int b=1000;
 cout<<(a&b)<<endl;
 */
 And the output is 0
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
 ****Address Of operator****
 
 *** C++ provides two-pointer operators, which are Address of Operator (&) and Indirection Operator (*).\
