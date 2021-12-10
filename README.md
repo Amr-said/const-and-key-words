@@ -170,5 +170,5 @@ And the output is 0
 And the output:\
 Value of var :3000\
 Value of ptr :0xbff64494\
-Value of val :3000\
+Value of val :3000
 
