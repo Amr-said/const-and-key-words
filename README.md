@@ -12,8 +12,8 @@ ______________
 **Ex:\
 /*int find (const int& obj);  */
 
-          **Here, the int obj is passed by reference into find. For safety's sake, const is used to ensure that find cannot change the obj--after all, it's just supposed to make sure that the obj is in a valid state. This can prevent silly programming mistakes that might otherwise result in damaging the obj (for instance, by setting a field             of the class for testing purposes, which might result in the field's never being reset)\
-          **Moreover, by declaring the argument const, users of the function can be sure that their object will not be changed and not need to worry about the possible side      effects of making the function call.\
+          **Here, the int obj is passed by reference into find. For safety's sake, const is used to ensure that find cannot change the obj--after all, it's just supposed to make sure that the obj is in a valid state. This can prevent silly programming mistakes that might otherwise result in damaging the obj (for instance, by setting a field of the class for testing purposes, which might result in the field's never being reset)\
+          **Moreover, by declaring the argument const, users of the function can be sure that their object will not be changed and not need to worry about the possible effects of making the function call.\
           
 **\
 ________________________________________________________________________________________________________________________________________________________________________________\
