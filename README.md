@@ -167,8 +167,8 @@ And the output is 0
        cout << "Value of ptr :" << ptr << endl;
        cout << "Value of val :" << val << endl;
        */
-And the output:
-Value of var :3000
-Value of ptr :0xbff64494
-Value of val :3000
+And the output:\
+Value of var :3000\
+Value of ptr :0xbff64494\
+Value of val :3000\
 
