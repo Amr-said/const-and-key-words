@@ -88,17 +88,17 @@ EX:\
 
 *Const iterators in the STL are simple enough: just append "const_" to the type of iterator you desire. For instance, we could iterator over a vector as follows:\
 Ex:\
-/*std::vector<int> vec;
-vec.push_back( 3 );
-vec.push_back( 4 );
-vec.push_back( 8 );
-for ( std::vector<int>::const_iterator itr = vec.begin(), end = vec.end();
-itr != end;
-++itr )
-{
-// just print out the values...
-std::cout<< *itr <<std::endl;
-}
+/*std::vector<int> vec;\
+vec.push_back( 3 );\
+vec.push_back( 4 );\
+vec.push_back( 8 );\
+for ( std::vector<int>::const_iterator itr = vec.begin(), end = vec.end();\
+itr != end;\
+++itr )\
+{\
+// just print out the values...\
+std::cout<< *itr <<std::endl;\
+}\
 */
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
 ****Const cast****
@@ -132,7 +132,7 @@ Ex:\
 *Once you make the reference part of the interface to the class, then, you fix the implementation details. This can be frustrating if you later wish to change your class's private data so the result of the function is computed when the function is invoked rather than actually be stored in the class at all times.\
 =================================================================================================================================================================================\
 
-####'&' Symbol####
+####'&' Symbol####\
 ------------------
 
 ***The & symbol is used as an operator in C++. It is used in 2 different places, one as a bitwise and operator and one as a pointer address of operator.\
