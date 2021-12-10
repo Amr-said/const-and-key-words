@@ -57,12 +57,13 @@ return pi*pi*r;
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
 ****Const Overloading****
 *In large part because const functions cannot return non-const references to an objects' data, there are many times where it might seem appropriate to have both const and non-const versions of a function.\
+
 **For instance, if you are returning a reference to some member data (usually not a good thing to do, but there are exceptions), then you may want to have a non-const version of the function that returns a non-const reference:\
 Ex:\
-#               /*int& myClass::getData(){
-#                     return data;
-#                 }
-#               */
+               /*int& myClass::getData(){
+                     return data;
+                 }
+               */
 ***On the other hand, you don't want to prevent someone using a const version of your object,\
 Ex:\
 /*myClass constDataHolder;*/
@@ -73,10 +74,10 @@ Ex:\
 *Fortunately, C++ allows you to overload based on the const-ness of a method. So you can have both const and non-const methods, and the correct version will be chosen.\
 **If you wish to return a non-const reference in some cases, you merely need to declare a second, const version of the method that returns a const method:\
 EX:\
-#                      /*const int& myData::getData() const {
-#                                    return data;
-#                                  }
-#                     */
+                      /*const int& myData::getData() const {
+                                    return data;
+                                  }
+                     */
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\
 ****Const iterators****
